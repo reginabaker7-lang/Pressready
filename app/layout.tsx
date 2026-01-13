@@ -16,4 +16,4 @@ export default function RootLayout({
     </html>
   );
 }Add root layout
-https://pressready.vercel.app
+
