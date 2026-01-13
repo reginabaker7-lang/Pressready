@@ -12,8 +12,14 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ margin: 0 }}>
         {children}
-      </body>
-    </html>
-  );
-}Add root layout
+          </body>
+  </html>
+);
+}
+
+
+
+      
+
+
 
