@@ -1,4 +1,5 @@
 // PressReady landing page
+import Link from "next/link";
 export default function Home() {
   return (
     <main style={{
@@ -19,21 +20,22 @@ export default function Home() {
         </p>
 
         <div style={{ marginTop: 30 }}>
-          <a
-            href="/check"
-            style={{
-              display: "inline-block",
-              padding: "14px 22px",
-              backgroundColor: "#d4af37",
-              color: "#000",
-              borderRadius: 8,
-              fontWeight: 600,
-              textDecoration: "none",
-              marginRight: 12
-            }}
-          >
-            Get Started Free
-          </a>
+         <Link
+  href="/check"
+  style={{
+    display: "inline-block",
+    padding: "14px 22px",
+    backgroundColor: "#d4af37",
+    color: "#000",
+    borderRadius: 8,
+    fontWeight: 600,
+    textDecoration: "none",
+    marginRight: 12
+  }}
+>
+  Get Started Free
+</Link> 
+
 
           <a
             href="/press-guide"
