@@ -56,17 +56,7 @@ export default function CheckPage() {
     const maxIn = Math.max(wIn, hIn);
     const minIn = Math.min(wIn, hIn);
 
-    const sizeLabel =
-      maxIn <= 4
-        ? "Sleeve / pocket size"
-        : maxIn <= 8
-        ? "Youth front (or small adult)"
-        : maxIn <= 12.5
-        ? "Adult front"
-        : "Oversize / back print";
- 
-      
-
+    
     return [
   {
     label: "File",
