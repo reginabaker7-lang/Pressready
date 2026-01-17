@@ -63,7 +63,30 @@ export default function CheckPage() {
         ? "Youth front (or small adult)"
         : maxIn <= 12.5
         ? "Adult front"
-        : "Oversize / back print";
+        : "Oversize / back print";{analysis && (
+  <section style={{ marginTop: 18 }}>
+
+    {/* TOP VERDICT BOX */}
+    <div
+      style={{
+        padding: 14,
+        borderRadius: 14,
+        border: "1px solid rgba(0,0,0,0.12)",
+        background:
+          verdict.status === "PASS"
+            ? "rgba(0, 255, 0, 0.06)"
+            : "rgba(255, 204, 0, 0.18)",
+        marginBottom: 14,
+      }}
+    >
+      <div style={{ fontSize: 18, fontWeight: 900, marginBottom: 6 }}>
+        {verdict.title}
+      </div>
+      <div style={{ opacity: 0.85, marginBottom: 6 }}>{verdict.subtitle}</div>
+      <div style={{ fontSize: 13, opacity: 0.75 }}>{verdict.note}</div>
+    </div>
+
+    <h3 style={{ margin: "16px 0 10px" }}>PressReady Results</h3>
 
     const dpiLabel =
       analysis.dpi == null
