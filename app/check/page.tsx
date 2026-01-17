@@ -63,59 +63,9 @@ export default function CheckPage() {
         ? "Youth front (or small adult)"
         : maxIn <= 12.5
         ? "Adult front"
-        : "Oversize / back print";{analysis && (
-  <section style={{ marginTop: 18 }}>
-
-    {/* TOP VERDICT BOX */}
-    <div
-      style={{
-        padding: 14,
-        borderRadius: 14,
-        border: "1px solid rgba(0,0,0,0.12)",
-        background:
-          verdict.status === "PASS"
-            ? "rgba(0, 255, 0, 0.06)"
-            : "rgba(255, 204, 0, 0.18)",
-        marginBottom: 14,
-      }}
-    >
-      <div style={{ fontSize: 18, fontWeight: 900, marginBottom: 6 }}>
-        {verdict.title}
-      </div>
-      <div style={{ opacity: 0.85, marginBottom: 6 }}>{verdict.subtitle}</div>
-      <div style={{ fontSize: 13, opacity: 0.75 }}>{verdict.note}</div>
-    </div>
-
-    <h3 style={{ margin: "16px 0 10px" }}>PressReady Results</h3>
-
-    const dpiLabel =
-      analysis.dpi == null
-        ? "No DPI metadata found (using 300 DPI estimate)"
-        : `${analysis.dpi} DPI detected from PNG metadata`;
-
-    const dpiWarn =
-      analysis.dpi != null && analysis.dpi < 250
-        ? "WARN"
-        : analysis.dpi != null
-        ? "PASS"
-        : "INFO";
-
-    const darkShirtWarn =
-      analysis.hasTransparency
-        ? {
-            status: "WARN" as const,
-            detail:
-              "Transparency detected. Without white ink/underbase, this usually won’t pop on dark shirts.",
-          }
-        : {
-            status: "INFO" as const,
-            detail:
-              "No transparency detected. Still be careful on dark shirts if your design has light colors.",
-          };
-
-    const contentBoxText = analysis.contentBox
-      ? `Content box: x=${analysis.contentBox.x}, y=${analysis.contentBox.y}, w=${analysis.contentBox.w}, h=${analysis.contentBox.h}`
-      : "Content box: (not available)";
+        : "Oversize / back print";
+ 
+      
 
     return [
   {
@@ -216,28 +166,32 @@ export default function CheckPage() {
 
       {analysis && (
         <section style={{ marginTop: 18 }}>{/* TOP VERDICT BOX */}
-<div
-  style={{
-    padding: 14,
-    borderRadius: 14,
-    border: "1px solid rgba(0,0,0,0.12)",
-    background:
-      verdict.status === "PASS"
-        ? "rgba(0, 200, 0, 0.10)"
-        : "rgba(255, 193, 7, 0.20)",
-    marginBottom: 14,
-  }}
->
-  <div style={{ fontSize: 20, fontWeight: 900, marginBottom: 6 }}>
-    {verdict.title}
+{verdict && (
+  <div
+    style={{
+      padding: 14,
+      borderRadius: 14,
+      border: "1px solid rgba(0,0,0,0.12)",
+      background:
+        verdict.status === "PASS"
+          ? "rgba(0, 200, 0, 0.10)"
+          : "rgba(255, 193, 7, 0.20)",
+      marginBottom: 14,
+    }}
+  >
+    <div style={{ fontSize: 20, fontWeight: 900, marginBottom: 6 }}>
+      {verdict.title}
+    </div>
+
+    <div style={{ opacity: 0.85, marginBottom: 6 }}>
+      {verdict.subtitle}
+    </div>
+
+    <div style={{ fontSize: 13, opacity: 0.75 }}>
+      {verdict.note}
+    </div>
   </div>
-  <div style={{ opacity: 0.85, marginBottom: 6 }}>
-    {verdict.subtitle}
-  </div>
-  <div style={{ fontSize: 13, opacity: 0.75 }}>
-    {verdict.note}
-  </div>
-</div>
+)}
           <h3 style={{ margin: "16px 0 10px" }}>PressReady Results</h3>
 
           <div style={{ display: "grid", gap: 10 }}>
