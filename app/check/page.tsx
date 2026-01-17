@@ -110,7 +110,7 @@ export default function CheckPage() {
       : "We couldn’t find a content box (image may be fully transparent or very faint).",
   },
 ];
-  }, [analysis]);
+  });
 
   return (
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 16px" }}>
