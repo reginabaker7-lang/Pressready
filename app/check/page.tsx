@@ -55,10 +55,12 @@ export default function CheckPage() {
 
     const maxIn = Math.max(wIn, hIn);
     const minIn = Math.min(wIn, hIn);
+    return [];
+});
 
     
-    return [
-  {
+  
+  
     label: "File",
     status: "PASS",
     detail: `${analysis.fileName} • ${analysis.fileSizeMB.toFixed(2)} MB`,
