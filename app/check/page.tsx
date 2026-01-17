@@ -215,7 +215,29 @@ export default function CheckPage() {
       )}
 
       {analysis && (
-        <section style={{ marginTop: 18 }}>
+        <section style={{ marginTop: 18 }}>{/* TOP VERDICT BOX */}
+<div
+  style={{
+    padding: 14,
+    borderRadius: 14,
+    border: "1px solid rgba(0,0,0,0.12)",
+    background:
+      verdict.status === "PASS"
+        ? "rgba(0, 200, 0, 0.10)"
+        : "rgba(255, 193, 7, 0.20)",
+    marginBottom: 14,
+  }}
+>
+  <div style={{ fontSize: 20, fontWeight: 900, marginBottom: 6 }}>
+    {verdict.title}
+  </div>
+  <div style={{ opacity: 0.85, marginBottom: 6 }}>
+    {verdict.subtitle}
+  </div>
+  <div style={{ fontSize: 13, opacity: 0.75 }}>
+    {verdict.note}
+  </div>
+</div>
           <h3 style={{ margin: "16px 0 10px" }}>PressReady Results</h3>
 
           <div style={{ display: "grid", gap: 10 }}>
