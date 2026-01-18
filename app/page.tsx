@@ -100,7 +100,22 @@ export default function Home() {
         Fewer mistakes, less wasted film, better results.
       </div>
     </div>
- 
+   </div>
+</section>
+
+{/* Footer */}
+<footer style={{ marginTop: 48, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
+  <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
+    <div style={{ opacity: 0.75, fontSize: 13 }}>© {new Date().getFullYear()} PressReady</div>
+    <div style={{ display: "flex", gap: 14, fontSize: 13 }}>
+      <a href="/privacy" style={{ color: "inherit", opacity: 0.8, textDecoration: "none" }}>Privacy</a>
+      <a href="/terms" style={{ color: "inherit", opacity: 0.8, textDecoration: "none" }}>Terms</a>
+      <a href="mailto:support@pressready.app" style={{ color: "inherit", opacity: 0.8, textDecoration: "none" }}>
+        Support
+      </a>
+    </div>
+  </div>
+</footer>
 
           <div>
             <h3>Youth + Sleeve Sizes</h3>
