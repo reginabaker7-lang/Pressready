@@ -46,17 +46,7 @@ export default function CheckPage() {
     }
   }
 
-  const rows: Row[] = useMemo(() => {
-    if (!analysis) return [];
-
-    const dpi = analysis.dpi ?? 300; // fallback if no DPI metadata
-    const wIn = analysis.widthPx / dpi;
-    const hIn = analysis.heightPx / dpi;
-
-    const maxIn = Math.max(wIn, hIn);
-    const minIn = Math.min(wIn, hIn);
-    return [];
-});
+  
 
     
   
