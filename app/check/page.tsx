@@ -61,56 +61,7 @@ export default function CheckPage() {
     
   
   
-    label: "File",
-    status: "PASS",
-    detail: `${analysis.fileName} • ${analysis.fileSizeMB.toFixed(2)} MB`,
-  },
-  {
-    label: "Dimensions",
-    status: "PASS",
-    detail: `${analysis.widthPx} × ${analysis.heightPx} px`,
-  },
-  {
-    label: "DPI",
-    status: dpiWarn,
-    detail:
-      analysis.dpi == null
-        ? "No DPI data found in this PNG (common). We’re estimating at 300 DPI."
-        : `${analysis.dpi} DPI detected`,
-  },
-  {
-    label: "Estimated print size",
-    status: "INFO",
-    detail: `${wIn.toFixed(2)}" × ${hIn.toFixed(2)}" (based on ${dpi} DPI)`,
-  },
-  {
-    label: "Best fit",
-    status: "INFO",
-    detail: sizeLabel,
-  },
-  {
-    label: "Transparency",
-    status: analysis.hasTransparency ? "PASS" : "WARN",
-    detail: analysis.hasTransparency
-      ? `Transparent background confirmed • ~${analysis.transparentPixelPct.toFixed(1)}% transparent pixels`
-      : "No transparency found • This may print with a background box (not DTF-ready)",
-  },
-  {
-    label: "Dark-shirt check (no white ink)",
-    status: analysis.hasTransparency ? "WARN" : "INFO",
-    detail: analysis.hasTransparency
-      ? "Heads up: Transparent PNG + no white ink usually won’t show on dark shirts. Use light shirts or order DTF with white underbase."
-      : "If your design has light colors, dark shirts still need white ink/underbase to pop.",
-  },
-  {
-    label: "Auto-crop hint",
-    status: "INFO",
-    detail: analysis.contentBox
-      ? `We found your design edges (safe crop): ${analysis.contentBox.w}×${analysis.contentBox.h} px content area`
-      : "We couldn’t find a content box (image may be fully transparent or very faint).",
-  },
-];
-  });
+  
 
   return (
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "32px 16px" }}>
