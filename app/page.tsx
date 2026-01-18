@@ -68,6 +68,39 @@ export default function Home() {
               Home printer? We tell you what will actually work.
             </p>
           </div>
+<div style={{ marginTop: 60 }}>
+  <h2 style={{ fontSize: 28, marginBottom: 12 }}>
+    How it works
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: 16,
+    }}
+  >
+    <div style={{ padding: 16, borderRadius: 12, border: "1px solid rgba(255,255,255,0.12)" }}>
+      <div style={{ fontWeight: 700, marginBottom: 6 }}>1. Upload your design</div>
+      <div style={{ opacity: 0.8 }}>
+        Upload a transparent PNG you plan to press.
+      </div>
+    </div>
+
+    <div style={{ padding: 16, borderRadius: 12, border: "1px solid rgba(255,255,255,0.12)" }}>
+      <div style={{ fontWeight: 700, marginBottom: 6 }}>2. We run quick checks</div>
+      <div style={{ opacity: 0.8 }}>
+        We look at size, DPI, transparency, and dark-shirt risks.
+      </div>
+    </div>
+
+    <div style={{ padding: 16, borderRadius: 12, border: "1px solid rgba(255,255,255,0.12)" }}>
+      <div style={{ fontWeight: 700, marginBottom: 6 }}>3. Press with confidence</div>
+      <div style={{ opacity: 0.8 }}>
+        Fewer mistakes, less wasted film, better results.
+      </div>
+    </div>
+ 
 
           <div>
             <h3>Youth + Sleeve Sizes</h3>
