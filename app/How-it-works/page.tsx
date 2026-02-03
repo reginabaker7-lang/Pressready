@@ -1,4 +1,4 @@
-export default function HowItWorksPage() {
+// ARCHIVED - do not use (use /how-it-works lowercase folder)export default function HowItWorksPage() {
   return (
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "40px 16px" }}>
       <h1 style={{ fontSize: 36, fontWeight: 700, marginBottom: 16 }}>
