@@ -1,131 +1,46 @@
-// PressReady landing page
 import Link from "next/link";
+
 export default function Home() {
   return (
-    <main style={{
-      minHeight: "100vh",
-      padding: "40px 20px",
-      fontFamily: "system-ui, sans-serif",
-      backgroundColor: "#0b0b0b",
-      color: "#f5f5f5"
-    }}>
-      <div style={{ maxWidth: 900, margin: "0 auto" }}>
-        <h1 style={{ fontSize: 42, marginBottom: 12 }}>
-          Press it right the first time.
+    <main style={{ minHeight: "100vh", padding: "40px 16px" }}>
+      <div style={{ maxWidth: 980, margin: "0 auto" }}>
+        <h1 style={{ fontSize: 40, margin: 0, lineHeight: 1.1 }}>
+          PressReady
         </h1>
 
-        <p style={{ fontSize: 18, lineHeight: 1.6, color: "#d4d4d4" }}>
-          PressReady checks your DTF designs before you press —
-          so you waste less film, save ink, and stop guessing.
+        <p style={{ marginTop: 12, fontSize: 18, lineHeight: 1.6, opacity: 0.85 }}>
+          Press it right the first time. Upload your design and PressReady checks it
+          for common DTF print issues before you waste film and ink.
         </p>
 
-        <div style={{ marginTop: 30 }}>
-         <Link
-  href="/check"
-  style={{
-    display: "inline-block",
-    padding: "14px 22px",
-    backgroundColor: "#d4af37",
-    color: "#000",
-    borderRadius: 8,
-    fontWeight: 600,
-    textDecoration: "none",
-    marginRight: 12
-  }}
->
-  Get Started Free
-</Link> 
-
-
-          <a
-            href="/press-guide"
+        <div style={{ marginTop: 22, display: "flex", gap: 12, flexWrap: "wrap" }}>
+          <Link
+            href="/check"
             style={{
-              color: "#d4af37",
-              fontWeight: 500,
-              textDecoration: "none"
+              display: "inline-block",
+              padding: "12px 16px",
+              borderRadius: 12,
+              textDecoration: "none",
+              border: "1px solid rgba(0,0,0,0.2)",
             }}
           >
-            How it works
-          </a>
-        </div>
+            Go to Design Check →
+          </Link>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: 20,
-          marginTop: 60
-        }}>
-          <div>
-            <h3>DTF Prep Check</h3>
-            <p style={{ color: "#cfcfcf" }}>
-              Transparency, sizing, DPI, and dark-shirt warnings — instantly.
-            </p>
-          </div>
-
-          <div>
-            <h3>No White Ink Friendly</h3>
-            <p style={{ color: "#cfcfcf" }}>
-              Home printer? We tell you what will actually work.
-            </p>
-          </div>
-<div style={{ marginTop: 60 }}>
-  <h2 style={{ fontSize: 28, marginBottom: 12 }}>
-    How it works
-  </h2>
-
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: 16,
-    }}
-  >
-    <div style={{ padding: 16, borderRadius: 12, border: "1px solid rgba(255,255,255,0.12)" }}>
-      <div style={{ fontWeight: 700, marginBottom: 6 }}>1. Upload your design</div>
-      <div style={{ opacity: 0.8 }}>
-        Upload a transparent PNG you plan to press.
-      </div>
-    </div>
-
-    <div style={{ padding: 16, borderRadius: 12, border: "1px solid rgba(255,255,255,0.12)" }}>
-      <div style={{ fontWeight: 700, marginBottom: 6 }}>2. We run quick checks</div>
-      <div style={{ opacity: 0.8 }}>
-        We look at size, DPI, transparency, and dark-shirt risks.
-      </div>
-    </div>
-
-    <div style={{ padding: 16, borderRadius: 12, border: "1px solid rgba(255,255,255,0.12)" }}>
-      <div style={{ fontWeight: 700, marginBottom: 6 }}>3. Press with confidence</div>
-      <div style={{ opacity: 0.8 }}>
-        Fewer mistakes, less wasted film, better results.
-      </div>
-    </div>
-   </div>
-</section>
-
-{/* Footer */}
-<footer style={{ marginTop: 48, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
-  <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-    <div style={{ opacity: 0.75, fontSize: 13 }}>© {new Date().getFullYear()} PressReady</div>
-    <div style={{ display: "flex", gap: 14, fontSize: 13 }}>
-      <a href="/privacy" style={{ color: "inherit", opacity: 0.8, textDecoration: "none" }}>Privacy</a>
-      <a href="/terms" style={{ color: "inherit", opacity: 0.8, textDecoration: "none" }}>Terms</a>
-      <a href="mailto:support@pressready.app" style={{ color: "inherit", opacity: 0.8, textDecoration: "none" }}>
-        Support
-      </a>
-    </div>
-  </div>
-</footer>
-
-          <div>
-            <h3>Youth + Sleeve Sizes</h3>
-            <p style={{ color: "#cfcfcf" }}>
-              Adult, youth, and sleeve sizing built in.
-            </p>
-          </div>
+          <Link
+            href="/how-it-works"
+            style={{
+              display: "inline-block",
+              padding: "12px 16px",
+              borderRadius: 12,
+              textDecoration: "none",
+              border: "1px solid rgba(0,0,0,0.2)",
+            }}
+          >
+            How it works →
+          </Link>
         </div>
       </div>
     </main>
   );
 }
- 
